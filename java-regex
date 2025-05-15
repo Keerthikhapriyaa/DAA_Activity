@@ -1,0 +1,34 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.Scanner;
+
+class Solution{
+
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        while(in.hasNext()){
+            String IP = in.next();
+            System.out.println(IP.matches(new MyRegex().pattern));
+        }
+
+    }
+}
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class Solution {
+    public static void main(String[] args) {
+        MyRegex myRegex = new MyRegex();
+        Scanner scanner = new Scanner(System.in);
+        
+        while (scanner.hasNext()) {
+            String ip = scanner.next();
+            // Check if the IP matches the pattern
+            System.out.println(Pattern.matches(myRegex.pattern, ip));
+        }
+        
+        scanner.close(); // Close the scanner
+    }
+}
+
+//Write your code here
