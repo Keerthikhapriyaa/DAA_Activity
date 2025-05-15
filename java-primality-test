@@ -1,0 +1,23 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the input as a string to handle large integers
+        String input = scanner.nextLine();
+        
+        // Create a BigInteger from the input string
+        BigInteger number = new BigInteger(input);
+        
+        // Check if the number is prime
+        if (number.isProbablePrime(1)) { // The argument is the certainty level
+            System.out.println("prime");
+        } else {
+            System.out.println("not prime");
+        }
+        
+        scanner.close(); // Close the scanner
+    }
+}
