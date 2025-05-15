@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Print the top border
+        System.out.println("================================");
+        
+        // Read input until there are no more lines
+        while (scanner.hasNext()) {
+            String str = scanner.next();
+            int num = scanner.nextInt();
+            
+            // Print formatted output
+            System.out.printf("%-15s%03d%n", str, num);
+        }
+        
+        // Print the bottom border
+        System.out.println("================================");
+        
+        scanner.close();
+    }
+}
